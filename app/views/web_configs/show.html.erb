@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Directory:</strong>
+  <%= @web_config.directory %>
+</p>
+
+<p>
+  <strong>Scan interval:</strong>
+  <%= @web_config.scan_interval %>
+</p>
+
+<p>
+  <strong>Old:</strong>
+  <%= @web_config.old %>
+</p>
+
+<%= link_to 'Edit', edit_web_config_path(@web_config) %> |
+<%= link_to 'Back', web_configs_path %>

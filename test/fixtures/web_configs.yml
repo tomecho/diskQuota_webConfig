@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  directory: MyText
+  scan_interval: 
+  old: 
+
+two:
+  directory: MyText
+  scan_interval: 
+  old: 

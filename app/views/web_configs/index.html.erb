@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Web Configs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Directory</th>
+      <th>Scan interval</th>
+      <th>Old</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @web_configs.each do |web_config| %>
+      <tr>
+        <td><%= web_config.directory %></td>
+        <td><%= web_config.scan_interval %></td>
+        <td><%= web_config.old %></td>
+        <td><%= link_to 'Show', web_config %></td>
+        <td><%= link_to 'Edit', edit_web_config_path(web_config) %></td>
+        <td><%= link_to 'Destroy', web_config, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Web config', new_web_config_path %>

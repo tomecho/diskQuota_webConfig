@@ -1,0 +1,29 @@
+<%= form_for(@web_config) do |f| %>
+  <% if @web_config.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@web_config.errors.count, "error") %> prohibited this web_config from being saved:</h2>
+
+      <ul>
+      <% @web_config.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :directory %><br>
+    <%= f.text_area :directory %>
+  </div>
+  <div class="field">
+    <%= f.label :scan_interval %><br>
+    <%= f.text_field :scan_interval %>
+  </div>
+  <div class="field">
+    <%= f.label :old %><br>
+    <%= f.text_field :old %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
