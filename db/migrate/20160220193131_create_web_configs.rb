@@ -2,8 +2,8 @@ class CreateWebConfigs < ActiveRecord::Migration
   def change
     create_table :web_configs do |t|
       t.text :directory
-      t.long :scan_interval
-      t.long :old
+      t.integer :scan_interval, limit: 8
+      t.integer :old, limit: 8
 
       t.timestamps null: false
     end
